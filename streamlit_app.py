@@ -39,7 +39,6 @@ try:
     streamlit.error("Please select a fruit to get information.")
   else:
     back_from_function = get_fruityvice_data(fruit_choice)
-    # formats the data into a table
     streamlit.dataframe(back_from_function)
 
 except URLError as e:
@@ -59,7 +58,7 @@ if streamlit.button('Get Fruit Load List'):
   streamlit.dataframe(my_data_rows)
 
 # don't run anything past here while we troubleshoot
-#streamlit.stop()
+streamlit.stop()
 
 #import snowflake.connector
 
